@@ -200,6 +200,9 @@ if os.path.exists('planes/index-en.html'):
     es_pln = es_pln.replace('window.location.href=\'../index-en.html\'', 'window.location.href=\'../index.html\'')
     es_pln = es_pln.replace('<span class="text-cyan-400 cursor-default">EN</span>', '<a href="index-en.html" class="text-white/60 hover:text-cyan-400 transition-colors font-semibold">EN</a>')
     es_pln = es_pln.replace('<a href="index.html" class="text-white/60 hover:text-cyan-400 transition-colors font-semibold">ES</a>', '<span class="text-cyan-400 cursor-default">ES</span>')
+    
+    # Convert Pound prices back to Euro format for Spanish version
+    es_pln = re.sub(r'£(\d+)', r'\1€', es_pln)
 
     translations_planes = {
         # SEO
