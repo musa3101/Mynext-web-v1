@@ -1,34 +1,181 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
+
     <!-- SEO & Metadata -->
     <title>MYNEXT - Arquitectura Digital Premium | Musa</title>
-    <meta name="description" content="Diseño y desarrollo de experiencias digitales exclusivas. Elevamos tu marca con arquitectura digital premium y diseño de alta fidelidad.">
+    <meta name="description"
+        content="Diseño y desarrollo de experiencias digitales exclusivas. Elevamos tu marca con arquitectura digital premium y diseño de alta fidelidad.">
     <meta name="author" content="Musa">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="MYNEXT - Arquitectura Digital Premium">
     <meta property="og:description" content="Transformamos tu visión en una identidad digital líquida y sofisticada.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/img/screen.png">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MYNEXT - Arquitectura Digital Premium">
-    <meta name="twitter:description" content="Diseño y desarrollo de experiencias digitales exclusivas. Elevamos tu marca con arquitectura digital premium y diseño de alta fidelidad.">
+    <meta name="twitter:description"
+        content="Diseño y desarrollo de experiencias digitales exclusivas. Elevamos tu marca con arquitectura digital premium y diseño de alta fidelidad.">
     <meta name="twitter:image" content="./assets/img/screen.png">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
     <!-- Extracted CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    
+
+    <!-- Animaciones Premium Hero -->
+    <style>
+        /* 1. Fondo Dinámico (Dark Mesh / Breathing Glow) */
+        @keyframes breathingGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-breathing-bg {
+            background: radial-gradient(circle at center, #0a0f18 0%, #050505 50%, #020810 100%);
+            background-size: 200% 200%;
+            animation: breathingGlow 18s ease-in-out infinite;
+        }
+
+        /* 2. Animación del Recuadro Central (Floating Effect) */
+        @keyframes floatPremium {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float-premium {
+            animation: floatPremium 6s ease-in-out infinite;
+        }
+
+        /* 3. Animación Alternativa del Logo (Fade Brillante) */
+        @keyframes logoReveal {
+            0% {
+                opacity: 0;
+                filter: brightness(2) drop-shadow(0 0 20px #00f2ff);
+            }
+
+            100% {
+                opacity: 1;
+                filter: brightness(1) drop-shadow(0 0 0px transparent);
+            }
+        }
+
+        .animate-logo-reveal {
+            animation: logoReveal 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        /* Animación sutil de las esquinas arquitectónicas */
+        @keyframes cornersFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-corners {
+            animation: cornersFade 2s ease-out 1s forwards;
+            opacity: 0;
+        }
+
+        /* 4. Text Shine Premium (Para el título de Nosotros) */
+        @keyframes textShine {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        .text-shine-premium {
+            background: linear-gradient(90deg, #0066ff, #00f2ff, #0066ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 4s linear infinite;
+        }
+
+        /* 5. Plakata Scale Animation (Scroll Reveal) */
+        .reveal.scale-pop {
+            transform: scale(0.6);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal.scale-pop.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* 6. EST 2026 Premium Reveal & Shine */
+        @keyframes estReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes estShine {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .animate-est-premium {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 242, 255, 0.9) 50%, rgba(255, 255, 255, 0.3) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: estReveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards, estShine 4s cubic-bezier(0.4, 0, 0.2, 1) 2s forwards;
+        }
+    </style>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -68,54 +215,98 @@
         }
     </script>
 </head>
-<body class="bg-void-black text-on-surface font-body selection:bg-electric-cyan selection:text-void-black overflow-x-hidden">
+
+<body
+    class="bg-void-black text-on-surface font-body selection:bg-electric-cyan selection:text-void-black overflow-x-hidden">
 
     <!-- 0. NAVIGATION -->
     <header id="main-header" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-        <nav id="nav-container" class="group flex items-center gap-2 sm:gap-6 md:gap-16 lg:gap-20 px-3 sm:px-8 md:px-20 py-2 rounded-full bg-[#050505]/80 backdrop-blur-2xl border border-electric-cyan/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-electric-cyan/50 hover:bg-electric-cyan/[0.05] hover:shadow-[0_0_30px_rgba(0,242,255,0.15)] transition-all ease-in-out opacity-0 pointer-events-auto" style="transition-duration: 1600ms;">
-            
+        <nav id="nav-container"
+            class="group flex items-center gap-2 sm:gap-6 md:gap-16 lg:gap-20 px-3 sm:px-8 md:px-20 py-2 rounded-full bg-[#050505]/80 backdrop-blur-2xl border border-electric-cyan/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-electric-cyan/50 hover:bg-electric-cyan/[0.05] hover:shadow-[0_0_30px_rgba(0,242,255,0.15)] transition-all ease-in-out opacity-0 pointer-events-auto"
+            style="transition-duration: 1600ms;">
+
             <!-- Left Navigation -->
-            <div id="nav-left" class="flex items-center gap-2.5 sm:gap-6 md:gap-12 ease-in-out -translate-x-[150%] translate-y-1" style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
-                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out" href="#inicio">Inicio</a>
-                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out" href="#nosotros">¿MYNEXT?</a>
+            <div id="nav-left"
+                class="flex items-center gap-2.5 sm:gap-6 md:gap-12 ease-in-out -translate-x-[150%] translate-y-1"
+                style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
+                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out"
+                    href="#inicio">Inicio</a>
+                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out"
+                    href="#nosotros">Nosotros</a>
             </div>
 
             <!-- Central Branding -->
-            <div id="nav-logo" class="relative group/logo ease-in-out -translate-y-[150%]" style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
-                <div class="absolute -inset-4 bg-electric-cyan/20 rounded-full blur-2xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700"></div>
-                <div class="relative w-9 h-9 sm:w-12 md:w-16 md:h-16 rounded-full p-[1.5px] bg-gradient-to-tr from-electric-cyan/60 via-white/20 to-electric-cyan/60 shadow-[0_0_20px_rgba(0,242,255,0.2)] group-hover/logo:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all duration-700">
-                    <div class="w-full h-full rounded-full bg-void-black flex items-center justify-center overflow-hidden p-1">
-                        <img alt="Logo MYNEXT" class="w-full h-full object-contain group-hover/logo:scale-110 transition-transform duration-700" src="./assets/img/logo-hero.svg">
+            <div id="nav-logo" class="relative group/logo ease-in-out -translate-y-[150%]"
+                style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
+                <!-- Aro difuminado exterior en rojo -->
+                <div
+                    class="absolute -inset-4 bg-red-600/20 rounded-full blur-2xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700">
+                </div>
+                <!-- Borde rojo brillante -->
+                <div
+                    class="relative w-9 h-9 sm:w-12 md:w-16 md:h-16 rounded-full p-[1.5px] bg-gradient-to-tr from-red-600/60 via-white/20 to-red-600/60 shadow-[0_0_20px_rgba(220,38,38,0.2)] group-hover/logo:shadow-[0_0_30px_rgba(220,38,38,0.4)] transition-all duration-700">
+                    <div
+                        class="w-full h-full rounded-full bg-void-black flex items-center justify-center overflow-hidden p-1">
+                        <!-- Nuevo Logo de Máxima Calidad -->
+                        <img alt="Logo MYNEXT"
+                            class="w-full h-full object-contain group-hover/logo:scale-110 transition-transform duration-700"
+                            src="./assets/img/logo-m1-new.png">
                     </div>
                 </div>
             </div>
 
             <!-- Right Navigation -->
-            <div id="nav-right" class="flex items-center gap-2.5 sm:gap-6 md:gap-12 ease-in-out translate-x-[150%] translate-y-1" style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
-                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out" href="#portfolio">Portfolio</a>
-                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out" href="#contacto">Contacto</a>
+            <div id="nav-right"
+                class="flex items-center gap-2.5 sm:gap-6 md:gap-12 ease-in-out translate-x-[150%] translate-y-1"
+                style="transition: transform 1600ms cubic-bezier(0.77, 0, 0.175, 1);">
+                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out"
+                    href="#portfolio">Portfolio</a>
+                <a class="text-[9px] sm:text-xs md:text-[13px] font-headline font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] text-white/85 hover:text-electric-cyan transition-all duration-300 ease-out"
+                    href="#contacto">Contacto</a>
+                <!-- Language Toggle -->
+                <div
+                    class="flex items-center gap-1.5 sm:gap-3 text-[9px] sm:text-[10px] md:text-[11px] font-headline font-bold tracking-[0.1em] md:tracking-[0.2em] ml-2 sm:ml-6">
+                    <span class="text-electric-cyan cursor-default">ES</span>
+                    <span class="text-white/30">|</span>
+                    <a href="index-en.html" class="text-white/60 hover:text-electric-cyan transition-colors">EN</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="relative z-10">
-        <!-- 1. HERO SECTION -->
-        <section class="h-screen flex items-center justify-center relative bg-void-black overflow-hidden" id="inicio">
-            <div class="relative z-10 flex flex-col items-center px-margin-mobile">
-                <!-- Premium Logo Container -->
-                <div class="relative p-10 md:p-16 rounded-[2.5rem] bg-[#050505] border border-white/[0.05] shadow-[0_0_60px_rgba(0,242,255,0.15)] flex items-center justify-center overflow-hidden group">
-                    <!-- Architectural corners -->
-                    <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-electric-cyan/40"></div>
-                    <div class="absolute top-6 right-6 w-3 h-3 border-t border-r border-electric-cyan/40"></div>
-                    <div class="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-electric-cyan/40"></div>
-                    <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-electric-cyan/40"></div>
+        <!-- INICIO HERO SECTION -->
+        <section
+            class="h-screen flex items-center justify-center relative bg-void-black overflow-hidden animate-breathing-bg"
+            id="inicio">
 
-                    <!-- Metadata Labels -->
-                    <div class="absolute bottom-6 right-12 text-[8px] tracking-[0.4em] text-white/30 uppercase font-headline">Est. 2026</div>
+            <div class="relative z-10 flex flex-col items-center px-margin-mobile">
+
+                <!-- Logo / Tarjeta de Presentación Premium -->
+                <div
+                    class="relative p-10 md:p-16 rounded-[2.5rem] bg-[#050505] border border-white/[0.05] shadow-[0_0_60px_rgba(0,242,255,0.15)] flex flex-col items-center justify-center overflow-hidden group animate-float-premium">
+
+                    <!-- Architectural Corners -->
+                    <div
+                        class="absolute top-6 left-6 w-3 h-3 border-t border-l border-electric-cyan/40 animate-corners">
+                    </div>
+                    <div
+                        class="absolute top-6 right-6 w-3 h-3 border-t border-r border-electric-cyan/40 animate-corners">
+                    </div>
+                    <div
+                        class="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-electric-cyan/40 animate-corners">
+                    </div>
+                    <div
+                        class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-electric-cyan/40 animate-corners">
+                    </div>
+
+                    <!-- Metadata Labels (Movido debajo del logo) -->
 
                     <!-- Light Sweep Effect -->
                     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                        <div class="w-1/2 h-full bg-gradient-to-r from-transparent via-white/[0.03] to-transparent -skew-x-12 translate-x-[-150%] animate-sweep"></div>
+                        <div
+                            class="w-1/2 h-full bg-gradient-to-r from-transparent via-white/[0.03] to-transparent -skew-x-12 translate-x-[-150%] animate-sweep">
+                        </div>
                     </div>
 
                     <!-- Scanner Pulse -->
@@ -123,71 +314,129 @@
                         <div class="w-full h-[1px] bg-electric-cyan/20 absolute top-0 animate-scanner"></div>
                     </div>
 
-                    <img alt="MYNEXT Arquitectura Digital" class="w-56 h-56 md:w-80 md:h-80 object-contain animate-logo-m relative z-10 transition-transform duration-1000 group-hover:scale-105" src="./assets/img/logo-hero.svg">
+                    <!-- Logo Central Original Completo -->
+                    <img alt="MYNEXT Arquitectura Digital"
+                        class="w-64 h-64 md:w-[350px] md:h-[350px] object-contain relative z-10 transition-transform duration-1000 group-hover:scale-105 animate-logo-reveal"
+                        src="./assets/img/logo-hero.svg">
+
+                    <!-- EST 2026 Centrado (con animación premium de aparición y brillo) -->
+                    <div
+                        class="-mt-8 md:-mt-12 text-[9px] md:text-[11px] tracking-[0.6em] uppercase font-headline relative z-20 text-center ml-2 animate-est-premium">
+                        EST. 2026</div>
                 </div>
             </div>
-            
+
             <!-- Scroll Indicator -->
-            <a class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 group transition-all duration-300" href="#nosotros">
-                <span class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
+            <a class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 group transition-all duration-300"
+                href="#nosotros">
+                <span
+                    class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
                     ¿QUÉ ES MYNEXT?<br>DESCÚBRELO ABAJO
                 </span>
-                <span class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
+                <span
+                    class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
             </a>
         </section>
 
         <!-- 2. NOSOTROS SECTION -->
-        <section class="min-h-screen flex flex-col items-center justify-center px-6 md:px-margin-desktop py-20 md:py-32 bg-void-black relative" id="nosotros">
+        <section
+            class="min-h-screen flex flex-col items-center justify-center px-6 md:px-margin-desktop py-20 md:py-32 bg-void-black relative"
+            id="nosotros">
             <div class="max-w-container-max w-full">
                 <div class="text-center mb-12 md:mb-16 reveal">
-                    <h2 class="text-3xl md:text-6xl font-headline font-bold tracking-tight text-gradient-cyan uppercase max-w-4xl mx-auto leading-tight mb-6 md:mb-8">
+                    <h2
+                        class="text-3xl md:text-6xl font-headline font-bold tracking-tight uppercase max-w-4xl mx-auto leading-tight mb-6 md:mb-8 text-shine-premium">
                         LA ARQUITECTURA DIGITAL QUE TU EMPRESA MERECE
                     </h2>
-                    <div class="font-body font-light text-white/80 max-w-[800px] mx-auto text-base md:text-xl leading-relaxed px-4">
-                        <p>Detrás de MYNEXT estoy yo, Musa. Diseño experiencias digitales exclusivas que definen tu <span class="liquid-neon-text">identidad líquida</span>. Fusiono estética minimalista y <span class="liquid-neon-text">excelencia visual</span> con precisión técnica para que tu plataforma trabaje por ti.</p>
+                    <div
+                        class="font-body font-light text-white/80 max-w-[800px] mx-auto text-base md:text-xl leading-loose px-4 flex flex-col items-center">
+                        <p class="text-center w-full">En <span class="text-electric-cyan font-medium">MYNEXT</span>, nos dedicamos a transformar tu visión en una plataforma digital única. Ayudamos a tu empresa a destacar en internet con un diseño limpio y moderno, diseñado para atraer a más clientes. Nos encargamos de todo el proceso técnico para que tu web sea rápida, eficiente y funcione para ti sin complicaciones.</p>
                     </div>
                 </div>
 
                 <!-- Redesigned Process: Bento Horizon -->
                 <div class="relative max-w-7xl mx-auto py-20" id="process-trigger">
+                    <!-- Título de Proceso Animado (Plakata) y Flecha Minimalista -->
+                    <div class="reveal scale-pop flex flex-col items-center mb-12 md:mb-16">
+                        <!-- Cuadro con borde hiperfino y brillo sutil (corte láser) -->
+                        <div
+                            class="px-6 py-2 border border-electric-cyan rounded-full bg-transparent shadow-[0_0_4px_rgba(0,242,255,0.4),inset_0_0_2px_rgba(0,242,255,0.4)] mb-4">
+                            <h3
+                                class="text-center text-xs md:text-sm font-headline font-bold text-white tracking-[0.4em] uppercase">
+                                NUESTRO PROCESO CREATIVO</h3>
+                        </div>
+                        <!-- Línea conectora y flecha minimalista (SVG Unificado) -->
+                        <div class="flex flex-col items-center mt-2 animate-scroll-bounce">
+                            <svg width="16" height="48" viewBox="0 0 16 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="drop-shadow-[0_0_3px_rgba(0,242,255,0.5)]">
+                                <!-- Línea descendente -->
+                                <path d="M8 0L8 46" stroke="#00F2FF" stroke-width="1.5" />
+                                <!-- Cabeza de flecha afilada -->
+                                <path d="M1 39L8 46L15 39" stroke="#00F2FF" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative z-10">
                         <!-- Step 01 -->
-                        <div id="card-1" class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]">
-                            <div class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">1</div>
+                        <div id="card-1"
+                            class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]">
+                            <div
+                                class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">
+                                1</div>
                             <div class="relative z-10 space-y-8">
-                                <div class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
                                     <span class="material-symbols-outlined text-3xl text-electric-cyan">hub</span>
                                 </div>
                                 <div class="space-y-4">
-                                    <h3 class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">Consultoría</h3>
+                                    <h3
+                                        class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">
+                                        Consultoría</h3>
                                     <p class="text-white/40 text-sm md:text-base font-light leading-relaxed">Definimos el ADN de tu proyecto. Trazamos la estrategia técnica y visual para que tu marca lidere su nicho digital.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Step 02 -->
-                        <div id="card-2" class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]" style="transition-delay: 0.15s;">
-                            <div class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">2</div>
+                        <div id="card-2"
+                            class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]"
+                            style="transition-delay: 0.15s;">
+                            <div
+                                class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">
+                                2</div>
                             <div class="relative z-10 space-y-8">
-                                <div class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
                                     <span class="material-symbols-outlined text-3xl text-electric-cyan">layers</span>
                                 </div>
                                 <div class="space-y-4">
-                                    <h3 class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">Arquitectura</h3>
+                                    <h3
+                                        class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">
+                                        Arquitectura</h3>
                                     <p class="text-white/40 text-sm md:text-base font-light leading-relaxed">Construimos con precisión quirúrgica. Código limpio y diseño exclusivo fusionados en una experiencia de alta gama.</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Step 03 -->
-                        <div id="card-3" class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]" style="transition-delay: 0.3s;">
-                            <div class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">3</div>
+                        <div id="card-3"
+                            class="process-card group/bento relative overflow-hidden p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl hover:border-electric-cyan/30 hover:bg-white/[0.04]"
+                            style="transition-delay: 0.3s;">
+                            <div
+                                class="card-number absolute -right-4 -bottom-4 text-[12rem] font-headline font-black text-white/[0.02] group-hover/bento:text-electric-cyan/[0.05] transition-colors duration-700 leading-none">
+                                3</div>
                             <div class="relative z-10 space-y-8">
-                                <div class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
-                                    <span class="material-symbols-outlined text-3xl text-electric-cyan">auto_awesome</span>
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-electric-cyan/5 border border-electric-cyan/20 flex items-center justify-center group-hover/bento:border-electric-cyan/50 transition-all duration-500">
+                                    <span
+                                        class="material-symbols-outlined text-3xl text-electric-cyan">auto_awesome</span>
                                 </div>
                                 <div class="space-y-4">
-                                    <h3 class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">Despegue</h3>
+                                    <h3
+                                        class="text-xl md:text-2xl font-headline font-bold text-white tracking-widest uppercase">
+                                        Despegue</h3>
                                     <p class="text-white/40 text-sm md:text-base font-light leading-relaxed">Lanzamiento y optimización continua. Tu plataforma no solo nace, sino que evoluciona para dominar el mercado.</p>
                                 </div>
                             </div>
@@ -200,16 +449,20 @@
                 </div>
             </div>
 
-            <a class="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3 group transition-all duration-300" href="#portfolio">
-                <span class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
+            <a class="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3 group transition-all duration-300"
+                href="#portfolio">
+                <span
+                    class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
                     ¿QUIERES VER MI TRABAJO?<br>DESCÚBRELO ABAJO
                 </span>
-                <span class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
+                <span
+                    class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
             </a>
         </section>
 
         <!-- 3. PORTFOLIO SECTION -->
-        <section class="min-h-screen py-32 pb-40 md:pb-48 px-margin-mobile md:px-margin-desktop bg-void-black relative" id="portfolio">
+        <section class="min-h-screen py-32 pb-40 md:pb-48 px-margin-mobile md:px-margin-desktop bg-void-black relative"
+            id="portfolio">
             <div class="max-w-container-max mx-auto">
                 <div class="text-center mb-24 md:mb-32 reveal">
                     <h2 class="text-3xl md:text-5xl font-headline font-bold text-white tracking-widest uppercase">Mi Trabajo</h2>
@@ -219,28 +472,39 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
                     <!-- Project A -->
                     <article class="reveal flex flex-col gap-8 group">
-                        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
+                        <div
+                            class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
                             <!-- Browser UI Mockup -->
-                            <div class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
+                            <div
+                                class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
                             </div>
-                            <div class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
+                            <div
+                                class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
                                 <!-- Actual Project Image -->
-                                <img src="./assets/img/porfolio1.png" alt="Preview Blessed Barber Studio" class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105">
-                                
-                                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                                
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
-                                    <a href="https://blessedbarbrerstudio.pages.dev" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
+                                <img src="./assets/img/porfolio1.png" alt="Preview Blessed Barber Studio"
+                                    class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105"
+                                    loading="lazy">
+
+                                <div
+                                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
+                                    <a href="https://blessedstudio.pages.dev/" target="_blank" rel="noopener noreferrer"
+                                        class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
                                         Ver Web →
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="space-y-4 px-4">
-                            <h3 class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">Blessed Barber Studio</h3>
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">
+                                Blessed Barber Studio</h3>
                             <div class="relative pl-6 border-l-2 border-electric-cyan/30">
                                 <p class="text-lg text-white/70 italic font-body leading-relaxed mb-2">
                                     "Musa entendió a la perfección la esencia de nuestro estudio. No solo creó una web visualmente imponente, sino que logró trasladar el lujo y la precisión de cada uno de nuestros cortes al mundo digital. Ha elevado nuestra marca a otro nivel."
@@ -252,28 +516,39 @@
 
                     <!-- Project B -->
                     <article class="reveal flex flex-col gap-8 md:mt-32 group" style="transition-delay: 200ms;">
-                        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
+                        <div
+                            class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
                             <!-- Browser UI Mockup -->
-                            <div class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
+                            <div
+                                class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
                                 <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
                             </div>
-                            <div class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
+                            <div
+                                class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
                                 <!-- Actual Project Image -->
-                                <img src="./assets/img/porfolio2.png" alt="Preview Bar Luna Llena" class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105">
-                                
-                                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                <img src="./assets/img/porfolio2.png" alt="Preview Bar Luna Llena"
+                                    class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105"
+                                    loading="lazy">
 
-                                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
-                                    <a href="https://barlunallena16.netlify.app/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
+                                <div
+                                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+
+                                <div
+                                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
+                                    <a href="https://barlunallena.pages.dev" target="_blank" rel="noopener noreferrer"
+                                        class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
                                         Ver Web →
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="space-y-4 px-4">
-                            <h3 class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">Bar Cafetería Luna Llena</h3>
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">
+                                Bar Cafetería Luna Llena</h3>
                             <div class="relative pl-6 border-l-2 border-electric-cyan/30">
                                 <p class="text-lg text-white/70 italic font-body leading-relaxed mb-2">
                                     "Llevar la esencia y la calidez de nuestro local al entorno digital parecía un reto, pero Musa lo hizo parecer fácil. Diseñó una carta digital impecable y sofisticada que entra por los ojos y refleja fielmente lo que somos."
@@ -283,26 +558,170 @@
                         </div>
                     </article>
                 </div>
+
+                <!-- Desplegable de Más Proyectos -->
+                <div id="more-projects" class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                    <!-- Project C -->
+                    <article class="reveal flex flex-col gap-8 group">
+                        <div
+                            class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
+                            <!-- Browser UI Mockup -->
+                            <div
+                                class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
+                                <img src="./assets/img/porfolio3.png" alt="Preview Ecuaplac"
+                                    class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
+                                    <a href="https://ecuaplac-v1.pages.dev" target="_blank" rel="noopener noreferrer"
+                                        class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
+                                        Ver Web →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 px-4">
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">
+                                Ecuaplac</h3>
+                            <div class="relative pl-6 border-l-2 border-electric-cyan/30">
+                                <p class="text-lg text-white/70 italic font-body leading-relaxed mb-2">
+                                    "Ecuaplac redefine el concepto de reformas de lujo y tabiquería seca para la arquitectura en Mallorca. Una fusión de minimalismo nórdico y transiciones interactivas ultra-fluidas."
+                                </p>
+                                <span class="text-sm font-headline text-electric-cyan/60 uppercase tracking-widest">— Reformas & Construcción</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project D -->
+                    <article class="reveal flex flex-col gap-8 md:mt-32 group">
+                        <div
+                            class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
+                            <!-- Browser UI Mockup -->
+                            <div
+                                class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
+                                <img src="./assets/img/porfolio4.png" alt="Preview RBARI Restaurant"
+                                    class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
+                                    <a href="https://rbari-v1.pages.dev" target="_blank" rel="noopener noreferrer"
+                                        class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
+                                        Ver Web →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 px-4">
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">
+                                RBARI RESTAURANT</h3>
+                            <div class="relative pl-6 border-l-2 border-electric-cyan/30">
+                                <p class="text-lg text-white/70 italic font-body leading-relaxed mb-2">
+                                    "Experiencia digital inmersiva para un auténtico restaurante de Bangladesh. Un diseño visualmente rico que transmite cultura y sabores a través de una interfaz limpia y de alto contraste y fotografía de alta calidad."
+                                </p>
+                                <span class="text-sm font-headline text-electric-cyan/60 uppercase tracking-widest">— DISEÑO WEB GASTRONÓMICO</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project E -->
+                    <article class="reveal flex flex-col gap-8 group md:-mt-16">
+                        <div
+                            class="relative aspect-[16/10] rounded-2xl overflow-hidden glass-panel border-white/5 transition-all duration-500 group-hover:border-electric-cyan/20 group-hover:shadow-[0_0_30px_rgba(0,242,255,0.1)]">
+                            <!-- Browser UI Mockup -->
+                            <div
+                                class="absolute top-0 left-0 right-0 h-8 bg-white/5 backdrop-blur-md flex items-center px-4 gap-2 z-30 border-b border-white/5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-[#050505] flex items-center justify-center overflow-hidden p-6 md:p-10">
+                                <img src="./assets/img/porfolio5.png" alt="Preview NEXT ERA Caps"
+                                    class="w-full h-full object-contain transition-transform duration-1000 group-hover:scale-105"
+                                    loading="lazy">
+                                <div
+                                    class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center z-20 backdrop-blur-sm">
+                                    <a href="https://nexterabymusa.pages.dev" target="_blank" rel="noopener noreferrer"
+                                        class="px-8 py-4 bg-white text-black font-headline font-bold text-[10px] tracking-[0.3em] uppercase rounded-full hover:bg-electric-cyan transition-all duration-500 shadow-xl">
+                                        Ver Web →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 px-4">
+                            <h3
+                                class="text-2xl md:text-3xl font-bold text-gradient-cyan font-headline uppercase tracking-tight">
+                                NEXT ERA</h3>
+                            <div class="relative pl-6 border-l-2 border-electric-cyan/30">
+                                <p class="text-lg text-white/70 italic font-body leading-relaxed mb-2">
+                                    "Tienda online de gorras de lujo y streetwear premium. Un diseño minimalista de alto contraste y animaciones interactivas enfocadas en la conversión y la exclusividad de la marca."
+                                </p>
+                                <span class="text-sm font-headline text-electric-cyan/60 uppercase tracking-widest">— Prototipo E-Commerce</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- View more projects Button -->
+                <div class="text-center mt-20 relative z-20">
+                    <button id="toggle-more-projects" data-text-more="Ver Más Proyectos"
+                        data-text-less="Ver Menos Proyectos"
+                        class="inline-flex items-center gap-3 px-10 py-5 bg-transparent text-white font-headline font-bold text-[11px] tracking-[0.3em] uppercase rounded-full border border-electric-cyan/30 hover:border-electric-cyan hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] active:scale-95 transition-all duration-300 group">
+                        <span id="toggle-text">Ver Más Proyectos</span>
+                        <span id="toggle-icon"
+                            class="material-symbols-outlined text-base group-hover:translate-y-0.5 transition-transform duration-300">keyboard_arrow_down</span>
+                    </button>
+                </div>
             </div>
 
-            <a class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3 group transition-all duration-300 mt-20" href="#contacto">
-                <span class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
+            <a class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3 group transition-all duration-300 mt-20"
+                href="#contacto">
+                <span
+                    class="font-headline text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white/50 group-hover:text-white transition-colors text-center">
                     ¿CONECTAMOS TU SIGUIENTE PASO?<br>DESCÚBRELO ABAJO
                 </span>
-                <span class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
+                <span
+                    class="material-symbols-outlined text-electric-cyan animate-scroll-bounce">keyboard_double_arrow_down</span>
             </a>
         </section>
 
         <!-- 4. CONTACTO SECTION -->
-        <section class="min-h-screen py-32 px-margin-mobile md:px-margin-desktop flex items-center justify-center relative bg-void-black" id="contacto">
+        <section
+            class="min-h-screen py-32 px-margin-mobile md:px-margin-desktop flex items-center justify-center relative bg-void-black"
+            id="contacto">
             <div class="max-w-4xl w-full text-center">
                 <div class="mb-20 reveal">
                     <!-- Glass Gold Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8A733E]/10 border border-[#8A733E]/30 text-[#e0c387] font-headline text-[9px] tracking-[0.3em] uppercase mb-8 backdrop-blur-md">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8A733E]/10 border border-[#8A733E]/30 text-[#e0c387] font-headline text-[9px] tracking-[0.3em] uppercase mb-8 backdrop-blur-md">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#e0c387] animate-pulse"></span>
                         Edición Exclusiva Lanzamiento
                     </div>
-                    <h2 class="text-3xl md:text-6xl font-body font-extrabold tracking-tight uppercase max-w-4xl mx-auto leading-tight mb-8 text-gradient-gold">
+                    <h2
+                        class="text-3xl md:text-6xl font-body font-extrabold tracking-tight uppercase max-w-4xl mx-auto leading-tight mb-8 text-gradient-gold">
                         TRANSFORMA TU WEB HOY Y LIDERA TU SECTOR
                     </h2>
                     <p class="font-body font-light text-white/70 max-w-2xl mx-auto mt-4 text-lg px-4">
@@ -312,43 +731,70 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto reveal px-4">
                     <!-- WhatsApp Card -->
-                    <a class="group relative block p-10 md:p-14 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-2xl hover:border-electric-cyan/30 transition-all duration-700 hover:-translate-y-3 overflow-hidden" href="https://wa.me/34673109486?text=%C2%A1Hola!%20Vengo%20desde%20la%20web%20de%20MYNEXT.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20dise%C3%B1o%20y%20arquitectura%20digital%20para%20mi%20negocio.%20%C2%A1Gracias!" target="_blank" rel="noopener noreferrer">
-                        <div class="absolute -inset-px bg-gradient-to-br from-electric-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <a class="group relative block p-10 md:p-14 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-2xl hover:border-electric-cyan/30 transition-all duration-700 hover:-translate-y-3 overflow-hidden"
+                        href="https://wa.me/34673109486?text=%C2%A1Hola!%20Vengo%20desde%20la%20web%20de%20MYNEXT.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20de%20dise%C3%B1o%20y%20arquitectura%20digital%20para%20mi%20negocio.%20%C2%A1Gracias!"
+                        target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="absolute -inset-px bg-gradient-to-br from-electric-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
                         <div class="relative z-10 flex flex-col items-center">
                             <div class="relative mb-10">
-                                <div class="absolute -inset-6 bg-electric-cyan/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div
+                                    class="absolute -inset-6 bg-electric-cyan/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                </div>
                                 <div class="relative w-20 h-20 flex items-center justify-center">
-                                    <div class="absolute inset-0 border-2 border-electric-cyan/10 rounded-full group-hover:border-electric-cyan/40 transition-all duration-700 group-hover:scale-125"></div>
-                                    <div class="absolute inset-2 border border-electric-cyan/5 rounded-full group-hover:border-electric-cyan/20 transition-all duration-700 group-hover:scale-110"></div>
-                                    <svg class="w-10 h-10 text-electric-cyan fill-current filter drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]" viewBox="0 0 24 24">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    <div
+                                        class="absolute inset-0 border-2 border-electric-cyan/10 rounded-full group-hover:border-electric-cyan/40 transition-all duration-700 group-hover:scale-125">
+                                    </div>
+                                    <div
+                                        class="absolute inset-2 border border-electric-cyan/5 rounded-full group-hover:border-electric-cyan/20 transition-all duration-700 group-hover:scale-110">
+                                    </div>
+                                    <svg class="w-10 h-10 text-electric-cyan fill-current filter drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                                     </svg>
                                 </div>
                             </div>
                             <div class="space-y-4 text-center flex flex-col items-center">
-                                <span class="text-white/30 text-[10px] tracking-[0.5em] uppercase block font-headline font-medium">Línea Directa</span>
-                                <span class="inline-block px-6 py-3 bg-white text-black font-headline font-bold text-[9px] md:text-[10px] tracking-[0.25em] uppercase rounded-full group-hover:bg-electric-cyan transition-all duration-500 shadow-xl mt-2">
-                                    Abrir WhatsApp →
+                                <span
+                                    class="text-white/30 text-[10px] tracking-[0.5em] uppercase block font-headline font-medium">Línea Directa</span>
+                                <span
+                                    class="inline-block px-6 py-3 bg-white text-black font-headline font-bold text-[9px] md:text-[10px] tracking-[0.25em] uppercase rounded-full group-hover:bg-electric-cyan transition-all duration-500 shadow-xl mt-2">
+                                    ABRIR WHATSAPP →
                                 </span>
                             </div>
                         </div>
                     </a>
 
                     <!-- Email Card -->
-                    <a class="group relative block p-10 md:p-14 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-2xl hover:border-electric-cyan/30 transition-all duration-700 hover:-translate-y-3 overflow-hidden" href="mailto:musaabdul97@icloud.com?subject=Nuevo%20Proyecto%20Digital%20%7C%20MYNEXT&body=Hola%2C%20Musa.%0A%0AHe%20estado%20revisando%20tu%20porfolio%20en%20MYNEXT%20y%20me%20interesa%20el%20enfoque%20de%20Arquitectura%20Digital%20para%20mi%20negocio.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20servicios%20y%20tarifas.%0A%0AUn%20saludo.">
-                        <div class="absolute -inset-px bg-gradient-to-br from-electric-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <a class="group relative block p-10 md:p-14 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-2xl hover:border-electric-cyan/30 transition-all duration-700 hover:-translate-y-3 overflow-hidden"
+                        href="mailto:mynextbymusa@gmail.com?subject=Nuevo%20Proyecto%20Digital%20%7C%20MYNEXT&body=Hola%2C%20Musa.%0A%0AHe%20estado%20revisando%20tu%20porfolio%20en%20MYNEXT%20y%20me%20interesa%20el%20enfoque%20de%20Arquitectura%20Digital%20para%20mi%20negocio.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tus%20servicios%20y%20tarifas.%0A%0AUn%20saludo.">
+                        <div
+                            class="absolute -inset-px bg-gradient-to-br from-electric-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
                         <div class="relative z-10 flex flex-col items-center">
                             <div class="relative mb-10">
-                                <div class="absolute -inset-6 bg-electric-cyan/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div
+                                    class="absolute -inset-6 bg-electric-cyan/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                                </div>
                                 <div class="relative w-20 h-20 flex items-center justify-center">
-                                    <div class="absolute inset-0 border-2 border-electric-cyan/10 rounded-full group-hover:border-electric-cyan/40 transition-all duration-700 group-hover:scale-125"></div>
-                                    <div class="absolute inset-2 border border-electric-cyan/5 rounded-full group-hover:border-electric-cyan/20 transition-all duration-700 group-hover:scale-110"></div>
-                                    <span class="material-symbols-outlined text-4xl text-electric-cyan filter drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">mail</span>
+                                    <div
+                                        class="absolute inset-0 border-2 border-electric-cyan/10 rounded-full group-hover:border-electric-cyan/40 transition-all duration-700 group-hover:scale-125">
+                                    </div>
+                                    <div
+                                        class="absolute inset-2 border border-electric-cyan/5 rounded-full group-hover:border-electric-cyan/20 transition-all duration-700 group-hover:scale-110">
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-4xl text-electric-cyan filter drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">mail</span>
                                 </div>
                             </div>
                             <div class="space-y-4 text-center flex flex-col items-center">
-                                <span class="text-white/30 text-[10px] tracking-[0.5em] uppercase block font-headline font-medium">Consultas HQ</span>
-                                <span class="inline-block px-6 py-3 bg-white text-black font-headline font-bold text-[9px] md:text-[10px] tracking-[0.25em] uppercase rounded-full group-hover:bg-electric-cyan transition-all duration-500 shadow-xl mt-2">
+                                <span
+                                    class="text-white/30 text-[10px] tracking-[0.5em] uppercase block font-headline font-medium">Consultas HQ</span>
+                                <span class="text-white/70 font-body text-xs mt-1 block">mynextbymusa@gmail.com</span>
+                                <span
+                                    class="inline-block px-6 py-3 bg-white text-black font-headline font-bold text-[9px] md:text-[10px] tracking-[0.25em] uppercase rounded-full group-hover:bg-electric-cyan transition-all duration-500 shadow-xl mt-2">
                                     Enviar Email →
                                 </span>
                             </div>
@@ -359,19 +805,27 @@
         </section>
 
         <!-- 4.5 PLANES SECTION/BANNER -->
-        <section class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-void-black border-t border-white/[0.03] relative overflow-hidden" id="planes-banner">
-            <div class="absolute -inset-0 bg-[radial-gradient(circle_at_center,rgba(0,242,255,0.02)_0%,transparent_70%)] pointer-events-none"></div>
+        <section
+            class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-void-black border-t border-white/[0.03] relative overflow-hidden"
+            id="planes-banner">
+            <div
+                class="absolute -inset-0 bg-[radial-gradient(circle_at_center,rgba(0,242,255,0.02)_0%,transparent_70%)] pointer-events-none">
+            </div>
             <div class="max-w-4xl mx-auto text-center reveal relative z-10">
                 <div class="space-y-6">
-                    <span class="text-electric-cyan/60 text-[10px] tracking-[0.5em] uppercase font-headline font-medium block">Transparencia & Resultados</span>
-                    <h3 class="text-2xl md:text-4xl font-headline font-bold text-white uppercase tracking-tight">Diseños Exclusivos con Tarifas a Tu Medida</h3>
+                    <span
+                        class="text-electric-cyan/60 text-[10px] tracking-[0.5em] uppercase font-headline font-medium block">Transparencia & Resultados</span>
+                    <h3 class="text-2xl md:text-4xl font-headline font-bold text-white uppercase tracking-tight">
+                        Diseños Exclusivos con Tarifas a Tu Medida</h3>
                     <p class="text-white/50 text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
                         Descubre nuestros planes de arquitectura digital y elige la opción que mejor se adapte a los objetivos de tu negocio.
                     </p>
                     <div class="pt-6">
-                        <a href="#" id="open-planes-modal" class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-electric-cyan to-[#0066FF] text-white font-headline font-bold text-[11px] tracking-[0.3em] uppercase rounded-full hover:shadow-[0_0_50px_rgba(0,242,255,0.4)] hover:scale-105 active:scale-95 transition-all duration-500 border border-electric-cyan/30 group">
+                        <a href="./planes/index.html"
+                            class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-electric-cyan to-[#0066FF] text-white font-headline font-bold text-[11px] tracking-[0.3em] uppercase rounded-full hover:shadow-[0_0_50px_rgba(0,242,255,0.4)] hover:scale-105 active:scale-95 transition-all duration-500 border border-electric-cyan/30 group">
                             Planes 2026
-                            <span class="material-symbols-outlined text-base group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
+                            <span
+                                class="material-symbols-outlined text-base group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -380,70 +834,197 @@
     </main>
 
     <!-- 5. FOOTER -->
-    <footer class="py-12 md:py-16 px-6 md:px-margin-desktop bg-void-black border-t border-white/5">
-        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex flex-col items-center md:items-start">
-                <span class="text-xl font-headline font-bold text-white tracking-widest uppercase">MYNEXT</span>
-                <span class="text-[10px] font-headline text-electric-cyan tracking-[0.3em] uppercase">Arquitectura Digital</span>
+    <footer class="py-16 px-6 md:px-margin-desktop bg-void-black border-t border-white/5 relative z-40">
+        <div class="max-w-container-max mx-auto flex flex-col gap-12">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+                <!-- Branding -->
+                <div class="flex flex-col items-center md:items-start text-center md:text-left gap-2">
+                    <span class="text-xl font-headline font-bold text-white tracking-widest uppercase">MYNEXT</span>
+                    <span class="text-[10px] font-headline text-electric-cyan tracking-[0.3em] uppercase">Arquitectura Digital</span>
+                </div>
+                <!-- Legal Links -->
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs font-body text-white/40">
+                    <a href="#" data-modal="aviso-legal"
+                        class="hover:text-white transition-colors duration-300 cursor-pointer">Aviso Legal</a>
+                    <a href="#" data-modal="privacidad"
+                        class="hover:text-white transition-colors duration-300 cursor-pointer">Política de Privacidad</a>
+                    <a href="#" data-modal="cookies"
+                        class="hover:text-white transition-colors duration-300 cursor-pointer">Política de Cookies</a>
+                    <a href="#" data-modal="terminos"
+                        class="hover:text-white transition-colors duration-300 cursor-pointer">Términos y Condiciones</a>
+                </div>
+                <!-- Social -->
+                <div class="flex gap-4 items-center">
+                    <!-- TikTok Icon -->
+                    <a href="https://www.tiktok.com/@mynextbymusa?_r=1&_t=ZN-96wInTFqMqZ" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-transparent transition-all duration-300 relative overflow-hidden"
+                        aria-label="TikTok">
+                        <!-- TikTok official brand background/glow on hover -->
+                        <div
+                            class="absolute inset-0 bg-[#010101] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#00f2fe]/20 to-[#fe0979]/20">
+                        </div>
+                        <svg class="w-5 h-5 fill-current text-white/40 group-hover:text-white relative z-10 transition-colors duration-300 filter group-hover:drop-shadow-[0_0_5px_rgba(0,242,255,0.8)]"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.29 6.29 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.19 8.19 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z" />
+                        </svg>
+                    </a>
+                    <!-- Instagram Icon -->
+                    <a href="#"
+                        class="instagram-trigger group w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-transparent transition-all duration-300 relative overflow-hidden"
+                        aria-label="Instagram">
+                        <!-- Instagram official brand gradient background on hover -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <svg class="w-5 h-5 fill-current text-white/40 group-hover:text-white relative z-10 transition-colors duration-300"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4.162 4.162 0 1 1 0-8.324A4.162 4.162 0 0 1 12 16zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="text-white/40 text-[10px] font-light uppercase tracking-widest text-center">
-                © 2026 MYNEXT. Todos los derechos reservados.
-            </div>
-            <div class="flex gap-6 items-center">
-                <!-- TikTok Icon -->
-                <a href="https://www.tiktok.com/@m5a.7rade?_r=1&_t=ZN-96Q2wmWrlMk" target="_blank" rel="noopener noreferrer" class="group w-10 h-10 flex items-center justify-center rounded-full border border-white/10 hover:border-electric-cyan/50 hover:bg-electric-cyan/5 transition-all duration-300" aria-label="TikTok">
-                    <svg class="w-5 h-5 fill-current text-white/40 group-hover:text-electric-cyan transition-colors duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.29 6.29 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.19 8.19 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-                    </svg>
-                </a>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-white/30 text-[10px] font-light uppercase tracking-widest">
+                <div>© 2026 MYNEXT. Todos los derechos reservados.</div>
+                <div class="font-headline tracking-[0.25em] text-white/40">
+                    Hecho por <a href="https://mynextbymusa.pages.dev" class="text-white hover:text-electric-cyan transition-colors duration-300 font-bold border-b border-white/20 hover:border-electric-cyan">MYNEXT</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- PLANES MODAL (COMING SOON) -->
-    <div id="planes-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 opacity-0 pointer-events-none transition-all duration-500">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/85 backdrop-blur-xl transition-opacity duration-500" id="close-planes-modal-bg"></div>
-        
-        <!-- Modal Card -->
-        <div class="relative w-full max-w-md p-8 md:p-12 rounded-[2.5rem] bg-white/[0.01] border border-electric-cyan/20 backdrop-blur-2xl shadow-[0_0_50px_rgba(0,242,255,0.08)] overflow-hidden scale-90 transition-transform duration-500 flex flex-col items-center justify-center text-center space-y-6" id="planes-modal-card">
-            <!-- Large Watermark Logo in Background -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none">
-                <img src="./assets/img/logo-hero.svg" alt="Watermark Logo" class="w-64 h-64">
-            </div>
-            
-            <!-- Glow background effect -->
-            <div class="absolute -top-40 -left-40 w-80 h-80 bg-electric-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
-            <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-[#0066FF]/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <!-- Corner Markers -->
-            <div class="absolute top-6 left-6 w-3 h-3 border-t border-l border-electric-cyan/30"></div>
-            <div class="absolute top-6 right-6 w-3 h-3 border-t border-r border-electric-cyan/30"></div>
-            <div class="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-electric-cyan/30"></div>
-            <div class="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-electric-cyan/30"></div>
-
-            <!-- Header Icon (No circular box, glowing M logo) -->
-            <div class="relative flex items-center justify-center py-2">
-                <img src="./assets/img/logo.svg" alt="MyNext Logo" class="w-16 h-16 object-contain filter drop-shadow-[0_0_20px_rgba(0,242,255,0.6)]">
-            </div>
-
-            <!-- Content -->
-            <div class="space-y-3 relative z-10">
-                <span class="text-electric-cyan text-[9px] tracking-[0.4em] uppercase font-headline font-semibold block">PLANES 2026</span>
-                <h3 class="text-2xl font-headline font-bold text-white uppercase tracking-tight">Pronto Lo Lanzaremos</h3>
-                <p class="text-white/60 text-xs font-light leading-relaxed max-w-[280px] mx-auto">
-                    Estamos actualizando nuestras tarifas y servicios para ofrecerte la máxima calidad. Muy pronto estarán disponibles los nuevos planes de arquitectura digital.
-                </p>
-            </div>
-
-            <!-- Close Button -->
-            <button id="close-planes-modal-btn" class="relative z-10 px-8 py-3 bg-white/5 border border-white/10 text-white hover:text-black hover:bg-white font-headline font-bold text-[9px] tracking-[0.2em] uppercase rounded-full transition-all duration-300">
-                Volver
+    <!-- COOKIES BANNER -->
+    <div id="cookie-banner" class="cookie-banner font-body">
+        <div class="space-y-3">
+            <h4 class="text-sm font-headline font-bold text-white uppercase tracking-wider">Control de Privacidad</h4>
+            <p class="text-xs text-white/60 leading-relaxed">
+                Utilizamos cookies propias y de terceros para optimizar la experiencia de navegación, analizar el rendimiento del sitio y ofrecer servicios adaptados a tus preferencias.
+            </p>
+        </div>
+        <div class="flex flex-col gap-2 mt-4 sm:flex-row sm:justify-end">
+            <button id="cookie-reject"
+                class="px-4 py-2 text-xs text-white/50 hover:text-white transition-colors duration-300 font-headline uppercase tracking-wider">
+                Rechazar no esenciales
             </button>
+            <button id="cookie-configure"
+                class="px-4 py-2 text-xs text-white/50 hover:text-white transition-colors duration-300 font-headline uppercase tracking-wider border border-white/10 rounded-lg hover:border-white/20">
+                Configurar
+            </button>
+            <button id="cookie-accept-all"
+                class="px-4 py-2 text-xs bg-white text-black font-headline font-bold uppercase tracking-wider rounded-lg hover:bg-electric-cyan hover:text-black transition-all duration-300">
+                Aceptar todas
+            </button>
+        </div>
+    </div>
+
+    <!-- LEGAL MODALS -->
+    <!-- Aviso Legal -->
+    <div id="aviso-legal" class="modal-wrapper">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button
+                class="modal-close absolute top-6 right-6 text-white/40 hover:text-white transition-colors duration-300"
+                aria-label="Close modal">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h3 class="text-2xl font-headline font-bold text-gradient-cyan uppercase tracking-wider mb-6">Aviso Legal
+            </h3>
+            <div class="space-y-4 text-sm text-white/70 font-body leading-relaxed">
+                <p class="font-bold text-white">1. Información General</p>
+                <p>En cumplimiento del deber de información establecido en la legislación vigente, a continuación se detallan los datos de información general de este sitio web:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Titular:</strong> MYNEXT</li>
+                    <li><strong>Contactoo:</strong> <a href="mailto:mynextbymusa@gmail.com"
+                            class="text-electric-cyan hover:underline">mynextbymusa@gmail.com</a></li>
+                    <li><strong>Actividad:</strong> Servicios de diseño y arquitectura digital premium.</li>
+                </ul>
+                <p class="font-bold text-white mt-4">2. Propiedad Intelectual</p>
+                <p>Todos los derechos de propiedad intelectual del contenido de este sitio web, su diseño gráfico, código fuente y logotipos son propiedad exclusiva de MYNEXT. Queda prohibida cualquier reproducción, distribución o comunicación pública sin autorización expresa.</p>
+                <p class="font-bold text-white mt-4">3. Limitación de Responsabilidad</p>
+                <p>El titular no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar errores u omisiones en los contenidos, o la falta de disponibilidad del portal web.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Política de Privacidad -->
+    <div id="privacidad" class="modal-wrapper">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button
+                class="modal-close absolute top-6 right-6 text-white/40 hover:text-white transition-colors duration-300"
+                aria-label="Close modal">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h3 class="text-2xl font-headline font-bold text-gradient-cyan uppercase tracking-wider mb-6">Política de Privacidad
+            </h3>
+            <div class="space-y-4 text-sm text-white/70 font-body leading-relaxed">
+                <p class="font-bold text-white">1. Responsable del Tratamiento</p>
+                <p>El responsable del tratamiento de los datos personales recogidos en este sitio web es MYNEXT, con correo de contacto <a href="mailto:mynextbymusa@gmail.com"
+                        class="text-electric-cyan hover:underline">mynextbymusa@gmail.com</a>.</p>
+                <p class="font-bold text-white mt-4">2. Finalidad del Tratamiento</p>
+                <p>Los datos personales facilitados (principalmente correo electrónico y nombre a través de consultas directas) serán utilizados exclusivamente para dar respuesta a las consultas y solicitudes enviadas por los usuarios.</p>
+                <p class="font-bold text-white mt-4">3. Conservación de los Datos</p>
+                <p>Los datos personales se conservarán durante el tiempo estrictamente necesario para cumplir con la finalidad para la que fueron recabados, o hasta que el usuario visite su supresión.</p>
+                <p class="font-bold text-white mt-4">4. Derechos del Usuario</p>
+                <p>Los usuarios pueden ejercer sus derechos de acceso, rectificación, supresión y limitación del tratamiento enviando un correo electrónico a <a href="mailto:mynextbymusa@gmail.com"
+                        class="text-electric-cyan hover:underline">mynextbymusa@gmail.com</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Política de Cookies -->
+    <div id="cookies" class="modal-wrapper">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button
+                class="modal-close absolute top-6 right-6 text-white/40 hover:text-white transition-colors duration-300"
+                aria-label="Close modal">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h3 class="text-2xl font-headline font-bold text-gradient-cyan uppercase tracking-wider mb-6">Política de Cookies
+            </h3>
+            <div class="space-y-4 text-sm text-white/70 font-body leading-relaxed">
+                <p class="font-bold text-white">1. ¿Qué son las cookies?</p>
+                <p>Una cookie es un pequeño archivo de texto que se almacena en su navegador al visitar casi cualquier página web. Su utilidad es permitir que la web recuerde su visita cuando vuelva a navegar por esa página.</p>
+                <p class="font-bold text-white mt-4">2. Cookies utilizadas en este sitio web</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Cookies Técnicas:</strong> Necesarias para el correcto funcionamiento del sitio, como la cookie que recuerda sus preferencias de privacidad.</li>
+                    <li><strong>Cookies de Personalización:</strong> Permiten recordar el idioma preferido del usuario.</li>
+                </ul>
+                <p class="font-bold text-white mt-4">3. Cómo desactivar las cookies</p>
+                <p>En cualquier momento puede ejercer su derecho a desactivar o eliminar las cookies de este sitio web a través de la configuración de su navegador web.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Términos y Condiciones -->
+    <div id="terminos" class="modal-wrapper">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button
+                class="modal-close absolute top-6 right-6 text-white/40 hover:text-white transition-colors duration-300"
+                aria-label="Close modal">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <h3 class="text-2xl font-headline font-bold text-gradient-cyan uppercase tracking-wider mb-6">Términos y Condiciones</h3>
+            <div class="space-y-4 text-sm text-white/70 font-body leading-relaxed">
+                <p class="font-bold text-white">1. Condiciones de Uso</p>
+                <p>El acceso y/o uso de este portal atribuye la condición de usuario, que acepta las condiciones generales de uso aquí reflejadas. Estas condiciones serán de aplicación independientemente de las condiciones generales de contratación que en su caso resulten de obligado cumplimiento.</p>
+                <p class="font-bold text-white mt-4">2. Uso del Portal</p>
+                <p>El sitio web proporciona el acceso a informaciones, servicios, programas o datos en Internet pertenecientes a MYNEXT. El usuario asume la responsabilidad del uso del portal.</p>
+                <p class="font-bold text-white mt-4">3. Modificaciones</p>
+                <p>MYNEXT se reserva el derecho de efectuar sin previo aviso las modificaciones que considere oportunas en su portal, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a través de la misma como la forma en la que éstos aparezcan presentados.</p>
+            </div>
         </div>
     </div>
 
     <!-- Extracted Scripts -->
     <script src="./js/main.js" defer></script>
 </body>
+
 </html>
